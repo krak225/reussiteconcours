@@ -1,9 +1,11 @@
+.gitignore
 .env
 .htaccess
 .quarantaine/
 README.md
-cracgame.com/
+phpinfolws.php
 default_index.html
+cracgame.com/
 djessytravaux.ci/
 glins.net/
 hitschretiens.com/
