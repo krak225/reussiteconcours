@@ -1,0 +1,45 @@
+
+
+	/*
+	function addToPanierLocalStorage(item){
+		
+		
+		var listLivresOnPanier = localStorage.getItem('listLivresOnPanier');// ? JSON.parse(localStorage.getItem('listLivresOnPanier')) : item;
+	
+		// if(listLivresOnPanier === 'null'){
+		if(!listLivresOnPanier){
+			alert('listLivresOnPanier IS NULL KRAK');
+			listLivresOnPanier = new Array();
+			listLivresOnPanier[0] = item;
+			alert(listLivresOnPanier[0]);
+		}else{
+			alert(listLivresOnPanier.length);
+		}
+		
+		var newLivre = true;
+		
+		// if(listLivresOnPanier.length){
+			// alert('not null');
+			
+			// listLivresOnPanier.forEach(function(v) {
+				// if (v.livre_id == id) {
+					// newLivre = false;
+				// }
+			// });
+		
+		// }
+		// listLivresOnPanier = item;
+		
+		// s'il est nouveau, on l'ajoute
+		if (newLivre) {
+			listLivresOnPanier[] = JSON.stringify(item);
+			// listLivresOnPanier.push(item);
+		}
+		
+		//Sauvegarder
+		localStorage.setItem('listLivresOnPanier', JSON.stringify(listLivresOnPanier));
+		
+	}
+	
+	// var listPanier = localStorage.getItem('listLivresOnPanier');
+	*/
