@@ -1,7 +1,5 @@
 .gitignore
 .env
-.htaccess
-.quarantaine/
 README.md
 phpinfolws.php
 default_index.html
@@ -9,9 +7,6 @@ cracgame.com/
 djessytravaux.ci/
 glins.net/
 hitschretiens.com/
-hitschretiens1.com/
 nanservices.net/
-old/
 storage/
 tests/
-tutoflutter.reussiteconcours.com/
