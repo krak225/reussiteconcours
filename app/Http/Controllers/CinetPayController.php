@@ -40,7 +40,7 @@ class CinetPayController extends Controller
 			$ENDPOINT 			= 'https://api-checkout.cinetpay.com/v2/payment';
 			$SITE_ID 			= '391516';
 			$API_KEY 			= '2782059835fd0aabd4be567.60280545';
-			$RETURN_URL	= 'https://reussiteconcours.com/checkout';
+			$RETURN_URL	= 'https://reussiteconcours.com/telechargements';
 			$NOTIFY_URL	= 'https://reussiteconcours.com/notify';
 			
 			
