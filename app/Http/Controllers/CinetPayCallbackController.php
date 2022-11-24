@@ -282,7 +282,7 @@ class CinetPayCallbackController extends Controller
 					// fclose($fp);
 					
 					// Stdfn::debug($transationData);
-					Stdfn::debug($message);
+					// Stdfn::debug($message);
 					
 					// On verifie que le montant payé chez CinetPay correspond à notre montant en base de données pour cette transaction
 					// if ($code == '00' && $amount == $checkout_session->amount) {
