@@ -183,7 +183,7 @@ $(document).ready(function() {
         // opération sur un entier pour éviter les problèmes d'arrondis
         
 		items += '<tr data-id="'+ v.id +'">\
-             <td><img src="images/livres/couvertures/'+ v.url +'"/></td>\
+             <td><img src="'+ v.url +'" style="width:100px;"/></td>\
              <td><a href="'+ v.url +'">'+ v.name +'</a></td>\
              <td width="150" align="center" class="font-weight-900">'+ v.price +' FCFA</td><td align="center"><a href="javascript:void(0)" class="delete-item btn btn-circle btn-danger btn-xs" title="" data-toggle="tooltip" data-original-title="Delete"><i class="ti-trash"></i></a></td></tr>';
         

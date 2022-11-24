@@ -44,4 +44,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+	
+	//
+	public function commandes(){
+		return $this->hasMany(Commande::class, 'user_id');	
+	}
+	
+	public function historique_connexions(){
+		return $this->hasMany(Commande::class, 'user_id');	
+	}
+	
 }

@@ -20,6 +20,10 @@
     </style>
     <script>
         function checkout() {
+			
+			//sauvegarder le checkout
+			let transaction_id = Math.floor(Math.random() * 100000000).toString();
+			
 			// alert(apikey);
 			CinetPay.setConfig({
                 apikey: apikey,
@@ -29,7 +33,7 @@
             });
 			
             CinetPay.getCheckout({
-                transaction_id: Math.floor(Math.random() * 100000000).toString(), // YOUR TRANSACTION ID
+                transaction_id: transaction_id, // YOUR TRANSACTION ID
                 amount: {{ $commande->commande_montant_total }},
                 currency: 'XOF',
                 channels: 'ALL',
@@ -83,6 +87,18 @@
 	</section>
 	<!--Page content -->
 	
+	@if(Session::has('warning'))
+		<div class="alert alert-warning">
+		  {{Session::get('warning')}}
+		</div>
+	@endif
+
+	@if(Session::has('message'))
+		<div class="alert alert-success">
+		  {{Session::get('message')}}
+		</div>
+	@endif
+	
 	<section class="py-50">
 		<div class="container">
 			<div class="row">
@@ -110,7 +126,7 @@
 										<h5>{{ $livre->livre_nom }}</h5>
 										<p>{{ $livre->livre_description }}</p>
 									</td>
-									<td width="100" align="center" class="font-weight-900">{{ $livre->livre_prix }} FCFA</td>
+									<td width="130" align="center" class="font-weight-900">{{ number_format($livre->livre_prix, 0, '.', ' ') }} FCFA</td>
 								</tr>
 								@endforeach								
 							</tbody>
@@ -143,7 +159,7 @@
 							<tbody>
 								<tr>
 									<td>Total</td>
-									<td class="text-right font-weight-700 subtotal_commande">{{ $commande->commande_montant_total }} FCFA</td>
+									<td class="text-right font-weight-700 subtotal_commande">{{ number_format($commande->commande_montant_total, 0, '.', ' ') }} FCFA</td>
 								</tr>
 								<tr>
 									<td>Réduction</td>
@@ -151,7 +167,7 @@
 								</tr>
 								<tr>
 									<th class="bt-1">Net à Payer</th>
-									<th class="bt-1 text-right font-weight-900 font-size-18 subtotal_commande">{{ $commande->commande_montant_total }} FCFA</th>
+									<th class="bt-1 text-right font-weight-900 font-size-18 subtotal_commande">{{ number_format($commande->commande_montant_total, 0, '.', ' ') }} FCFA</th>
 								</tr>
 							</tbody>
 						</table>
@@ -162,9 +178,11 @@
 					<form method="post" action="{{route('initPaiementCinetPay')}}">
 						{!! csrf_field() !!}
 						<input type="hidden" name="commande_id" value="{{$commande->commande_id}}"/>
-						<button type="button" onclick="checkout()" class="btn btn-primary"><i class="fa fa-cc-paypal"></i> Payer par Mobile Money</button>
+						<!--button type="button" onclick="checkout()" class="btn btn-primary"><i class="fa fa-cc-paypal"></i> Payer par Mobile Money</button-->
+						<button type="submit" class="btn btn-primary"><i class="fa fa-cc-paypal"></i> Payer par Mobile Money</button>
 					</form>
 				  </div>
+				  
 				  @endif
 				</div> 
 			  </div>

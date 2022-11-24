@@ -13,7 +13,8 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         //
-		'http://reussiteconcours.com/notify',//CINETPAY
+		'http://reussiteconcours.com/notify/',//CINETPAY
+		'http://localhost/reussiteconcours/public/notify',//CINETPAY
     ];
 	
 }

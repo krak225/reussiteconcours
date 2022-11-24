@@ -85,9 +85,15 @@ class CommandeController extends Controller
 		
 		$commande = Commande::where(['commande_id'=>$commande_id])->first();
 		
-		$livres_commandes = DetailCommande::join('livre','livre.livre_id','detail_commande.livre_id')->where(['commande_id'=>$commande_id])->get();
+		if(!empty($commande)){
+			// dd($commande);
+			$livres_commandes = DetailCommande::join('livre','livre.livre_id','detail_commande.livre_id')->where(['commande_id'=>$commande_id])->get();
 		
-        return view('shop.checkout', ['commande'=>$commande, 'livres_commandes'=>$livres_commandes]);
+			return view('shop.checkout', ['commande'=>$commande, 'livres_commandes'=>$livres_commandes]);
+		
+		}else{
+			return redirect()->route('home'); 
+		}
 		
     }
 	

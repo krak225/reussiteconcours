@@ -58,7 +58,7 @@
 													<!--p class="mb-10 text-light font-size-12"><i class="fa fa-calendar mr-5"></i> {{ $livre->livre_date_creation }}</p-->
 													<p class="box-text text-muted my-5 text-justify">{{ $livre->livre_description }}</p>
 													<h4 class="pro-price text-blue">{{ $livre->livre_prix }} FCFA<small class="ml-5"><del><!--$24.99--></del></small></h4>
-													<span class="btn btn-outline btn-primary btn-sm btnAddPanier" data-livre_id="{{ $livre->livre_id }}" data-livre_prix="{{ $livre->livre_prix }}" data-livre_nom="{{ $livre->livre_nom }}" data-livre_description="{{ $livre->livre_description }}"><i class="mdi mdi-cart-plus"></i> Ajouter au panier</span>
+													<span class="btn btn-outline btn-primary btn-sm btnAddPanier" data-livre_id="{{ $livre->livre_id }}" data-livre_prix="{{ $livre->livre_prix }}" data-livre_nom="{{ $livre->livre_nom }}" data-livre_description="{{ $livre->livre_description }}" data-livre_couverture="{{ asset('images/livres/couvertures/'.$livre->livre_couverture) }}"><i class="mdi mdi-cart-plus"></i> Ajouter au panier</span>
 												</div>
 											</div>
 										</div>
@@ -87,7 +87,7 @@
 													<!--p class="mb-10 text-light font-size-12"><i class="fa fa-calendar mr-5"></i> {{ $livre->livre_date_creation }}</p-->
 													<p class="box-text">{{ $livre->livre_description }}</p>
 													<h4 class="pro-price text-blue">{{ $livre->livre_prix }} FCFA<small class="ml-5"><del><!--$24.99--></del></small></h4>
-													<span class="btn btn-outline btn-primary btn-sm btnAddPanier" data-livre_id="{{ $livre->livre_id }}" data-livre_prix="{{ $livre->livre_prix }}" data-livre_nom="{{ $livre->livre_nom }}" data-livre_description="{{ $livre->livre_description }}"><i class="mdi mdi-cart-plus"></i> Ajouter au panier</span>
+													<span class="btn btn-outline btn-primary btn-sm btnAddPanier" data-livre_id="{{ $livre->livre_id }}" data-livre_prix="{{ $livre->livre_prix }}" data-livre_nom="{{ $livre->livre_nom }}" data-livre_description="{{ $livre->livre_description }}" data-livre_couverture="{{ asset('images/livres/couvertures/'.$livre->livre_couverture) }}"><i class="mdi mdi-cart-plus"></i> Ajouter au panier</span>
 												</div>
 											</div>
 										</div>

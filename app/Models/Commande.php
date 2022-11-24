@@ -17,4 +17,10 @@ class Commande extends Model
 		return $this->hasMany(DetailCommande::class, 'commande_id');	
 	}
 	
+	public function user(){
+
+        return $this->belongsTo(User::class, 'user_id');
+
+    }
+	
 }
