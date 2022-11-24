@@ -43,7 +43,7 @@ Route::post('/commande', [CommandeController::class, 'SaveCommande'])->name('Sav
 Route::get('/checkout', [CommandeController::class, 'checkout'])->name('checkout');
 
 Route::post('/initpaiementcinetpay', [CinetPayController::class, 'initPaiementCinetPay'])->name('initPaiementCinetPay');
-Route::post('/notify', [CinetPayCallbackController::class, 'notify'])->name('notify');
+Route::get('/notify', [CinetPayCallbackController::class, 'notify'])->name('notify');
 Route::post('/retour', [CinetPayCallbackController::class, 'retour'])->name('retour');
 Route::get('/paiementaconfirmer', [CinetPayCallbackController::class, 'PaiementAConfirmer'])->name('PaiementAConfirmer');
 Route::get('/paiement_reussie', [CinetPayCallbackController::class, 'paiement_reussie'])->name('paiement_reussie');
