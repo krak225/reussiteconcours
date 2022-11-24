@@ -194,7 +194,7 @@ class CinetPayCallbackController extends Controller
 	
 	public function notify(Request $request)
     {
-		// die("TEST POUR VOIR SI LES NOTIFICATIONS ARRIVENT");
+		die("TEST POUR VOIR SI LES NOTIFICATIONS ARRIVENT");
 		//TEST POUR VOIR SI LES NOTIFICATIONS ARRIVENT
 		$ipn = new IPN();
 		$ipn->ipn_data = 'Notify Events '.json_encode(['cpm_trans_id'=>$request->cpm_trans_id, 'cpm_site_id'=>$request->cpm_site_id, 'remote_addr'=>$_SERVER['REMOTE_ADDR']]);
