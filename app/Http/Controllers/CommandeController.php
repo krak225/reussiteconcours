@@ -72,6 +72,8 @@ class CommandeController extends Controller
 		
 		session(['commande_id' => $commande->commande_id]);
 		
+		dd(['commande_id' => $commande->commande_id]);
+		
 		return redirect()->route('checkout');
 		
     }

@@ -27,7 +27,7 @@ class HomeController extends Controller
     public function index()
     {
 		
-		$concours = Concours::all();
+		$concours = Concours::where(['concours_statut'=>'VALIDE'])->get()->sortBy('id');
 		$livres = Livre::where(['livre_statut'=>'VALIDE'])->get();
 		
         return view('home', ['concours'=>$concours, 'livres'=>$livres]);
