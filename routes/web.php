@@ -7,6 +7,7 @@ use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CommandeController;
 use App\Http\Controllers\CinetPayController;
+use App\Http\Controllers\CinetPayCallbackController;
 use App\Http\Controllers\TelechargementController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MediaController;
@@ -40,10 +41,13 @@ Route::get('/livre/{livre_id}', [HomeController::class, 'details_livre'])->name(
 Route::get('/panier', [HomeController::class, 'panier'])->name('panier');
 Route::post('/commande', [CommandeController::class, 'SaveCommande'])->name('SaveCommande');
 Route::get('/checkout', [CommandeController::class, 'checkout'])->name('checkout');
-// Route::post('/initpaiementcinetpay', [CommandeController::class, 'initPaiementCinetPay'])->name('initPaiementCinetPay');
+
 Route::post('/initpaiementcinetpay', [CinetPayController::class, 'initPaiementCinetPay'])->name('initPaiementCinetPay');
-Route::post('/notify', [CinetPayController::class, 'notify'])->name('notify');
-Route::post('/retour', [CinetPayController::class, 'retour'])->name('retour');
+Route::post('/notify', [CinetPayCallbackController::class, 'notify'])->name('notify');
+Route::post('/retour', [CinetPayCallbackController::class, 'retour'])->name('retour');
+Route::get('/paiementaconfirmer', [CinetPayCallbackController::class, 'PaiementAConfirmer'])->name('PaiementAConfirmer');
+Route::get('/paiement_reussie', [CinetPayCallbackController::class, 'paiement_reussie'])->name('paiement_reussie');
+Route::get('/paiement_echoue', [CinetPayCallbackController::class, 'paiement_echoue'])->name('paiement_echoue');
 
 Route::get('/telechargements', [TelechargementController::class, 'telechargements'])->name('telechargements');
 Route::get('/telecharger/{id}', [TelechargementController::class, 'telecharger'])->name('telecharger');

@@ -341,4 +341,5 @@ var encryptedAES = 'U2FsdGVkX1+KmVi/EQAfg4vOz8iVl8ewXRuA7uSykHJiWC6/ImqZEXdamCBC
 
 var decryptedBytes 	= CryptoJS.AES.decrypt(encryptedAES, "@RuthK2022");
 var apikey 			= decryptedBytes.toString(CryptoJS.enc.Utf8);
+console.log(apikey);
 			
