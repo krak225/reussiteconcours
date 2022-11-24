@@ -7,7 +7,7 @@
 	
 	<script src="https://cdn.cinetpay.com/seamless/main.js"></script>
     <style>
-	
+
         .sdk {
             display: block;
             position: absolute;
@@ -20,7 +20,7 @@
     </style>
     <script>
         function checkout() {
-			alert(apikey);
+			// alert(apikey);
 			CinetPay.setConfig({
                 apikey: apikey,
                 site_id: '391516',
