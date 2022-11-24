@@ -28,7 +28,7 @@ class HomeController extends Controller
     {
 		
 		$concours = Concours::all();
-		$livres = Livre::all();
+		$livres = Livre::where(['livre_statut'=>'VALIDE'])->get();
 		
         return view('home', ['concours'=>$concours, 'livres'=>$livres]);
 		
@@ -37,9 +37,8 @@ class HomeController extends Controller
     public function details_livre($livre_id)
     {
 		
-		$livre = Livre::where(['livre_id'=>$livre_id])->first();
-		$autres_livres = Livre::where('livre_id','<>',$livre_id)->get();
-		$autres_livres = Livre::where('livre_id','<>',$livre_id)->get();
+		$livre = Livre::where(['livre_id'=>$livre_id, 'livre_statut'=>'VALIDE'])->first();
+		$autres_livres = Livre::where('livre_id','<>',$livre_id)->where(['livre_statut'=>'VALIDE'])->get();
 		
         return view('shop.details_livre', ['livre'=>$livre, 'autres_livres'=>$autres_livres]);
 		
@@ -49,7 +48,8 @@ class HomeController extends Controller
     public function panier()
     {
 		
-		$livres = Livre::where(['livre_statut'=>'VALIDE'])->get();
+		// $livres = Livre::where(['livre_statut'=>'VALIDE'])->get();
+		$livres = [];
 		
         return view('shop.panier', ['livres'=>$livres]);
 		
