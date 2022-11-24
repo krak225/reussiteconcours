@@ -72,8 +72,7 @@ class CommandeController extends Controller
 		
 		session(['commande_id' => $commande->commande_id]);
 		
-		dd(['commande_id' => $commande->commande_id]);
-		
+
 		return redirect()->route('checkout');
 		
     }
@@ -87,7 +86,7 @@ class CommandeController extends Controller
 		$commande = Commande::where(['commande_id'=>$commande_id])->first();
 		
 		$livres_commandes = DetailCommande::join('livre','livre.livre_id','detail_commande.livre_id')->where(['commande_id'=>$commande_id])->get();
-		
+		dd($livres_commandes);
         return view('shop.checkout', ['commande'=>$commande, 'livres_commandes'=>$livres_commandes]);
 		
     }
