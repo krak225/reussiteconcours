@@ -53,8 +53,6 @@ Route::get('/telechargements', [TelechargementController::class, 'telechargement
 Route::get('/telecharger/{id}', [TelechargementController::class, 'telecharger'])->name('telecharger');
 
 
-
-
 // Route::get('/clear-cache', function() {
     // Artisan::call('cache:clear');
     // Artisan::call('route:clear');
@@ -62,7 +60,6 @@ Route::get('/telecharger/{id}', [TelechargementController::class, 'telecharger']
     // Artisan::call('config:clear');
     // return "Cache is cleared";
 // });
-
 
 
 require __DIR__.'/auth.php';
