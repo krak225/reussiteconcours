@@ -93,7 +93,7 @@
 
 				  <div class="box-body">
 					<div class="table-responsive">
-						<table class="table product-overview__">
+						<table class="table product-overview_commande">
 							<thead>
 								<tr>
 									<th>Image</th>
@@ -101,7 +101,7 @@
 									<th style="text-align:center">Prix</th>
 								</tr>
 							</thead>
-							<tbody id="cart-tablebody__">
+							<tbody id="cart-tablebody_commande">
 								@foreach($livres_commandes as $livre)
 								<tr>
 									<td><img src="{{ asset('images/livres/couvertures/'.$livre->livre_couverture) }}" alt="" width="80"></td>
@@ -142,7 +142,7 @@
 							<tbody>
 								<tr>
 									<td>Total</td>
-									<td class="text-right font-weight-700 subtotal">{{ $commande->commande_montant_total }} FCFA</td>
+									<td class="text-right font-weight-700 subtotal_commande">{{ $commande->commande_montant_total }} FCFA</td>
 								</tr>
 								<tr>
 									<td>Réduction</td>
@@ -150,7 +150,7 @@
 								</tr>
 								<tr>
 									<th class="bt-1">Net à Payer</th>
-									<th class="bt-1 text-right font-weight-900 font-size-18 subtotal">{{ $commande->commande_montant_total }} FCFA</th>
+									<th class="bt-1 text-right font-weight-900 font-size-18 subtotal_commande">{{ $commande->commande_montant_total }} FCFA</th>
 								</tr>
 							</tbody>
 						</table>

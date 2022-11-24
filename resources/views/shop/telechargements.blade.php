@@ -33,7 +33,7 @@
 
 				  <div class="box-body">
 					<div class="table-responsive">
-						<table class="table product-overview">
+						<table class="table product-overview_commande">
 							<thead>
 								<tr>
 									<th>Image</th>
@@ -43,7 +43,7 @@
 									<th style="text-align:center">Action</th>
 								</tr>
 							</thead>
-							<tbody id="cart-tablebody">
+							<tbody id="cart-tablebody_commande">
 								@foreach($livres_achetes as $livre)
 								<tr>
 									<td><img src="{{ asset('images/livres/couvertures/'.$livre->livre_couverture) }}" alt="" width="80"></td>
