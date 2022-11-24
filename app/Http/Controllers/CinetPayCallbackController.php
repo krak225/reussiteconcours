@@ -359,7 +359,7 @@ class CinetPayCallbackController extends Controller
 	public function CheckTransactionStatus($transaction_id, $token)
     {
 		
-		$API_KEY 			= '1114703932630f91ed741316.24658063';
+		$API_KEY 			= '2782059835fd0aabd4be567.60280545';
 		$SITE_ID 			= '391516';
 		
 		$status = '';
@@ -432,7 +432,7 @@ class CinetPayCallbackController extends Controller
 	public function getTransactionStatus($transaction_id, $site_id)
     {
 		
-		$API_KEY 			= '1114703932630f91ed741316.24658063';
+		$API_KEY 			= '2782059835fd0aabd4be567.60280545';
 		$SITE_ID 			= $site_id;
 		
 		$status = '';
@@ -495,7 +495,7 @@ class CinetPayCallbackController extends Controller
 		$ipn->ipn_date = gmdate('Y-m-d H:i:s');
 		$ipn->save();
 		
-		$API_KEY 			= '1114703932630f91ed741316.24658063';
+		$API_KEY 			= '2782059835fd0aabd4be567.60280545';
 		$SITE_ID 			= '391516';
 		
 		//
