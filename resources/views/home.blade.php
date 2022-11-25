@@ -118,7 +118,8 @@
 								<h1 class="mb-15">COURS DE PREPARATIONS</h1>
 								<h4 class="font-weight-400">Des professeurs qualifiés pour vous dispenser les cours qu'il faut...</h4>
 								<p class="font-size-22">Experimentez dès maintenant !</p>
-								<a href="#" class="btn btn-outline btn-primary">S'inscrire</a>
+								<a href="#" class="btn btn-outline btn-primary">S'inscrire</a> 
+								<a href="https://wa.me/0505882822" class="btn btn-outline btn-success">Discuter sur WhatsApp</a>
 							</div>
 							<div class="col-lg-6 col-12">
 								<div class="media-list media-list-hover media-list-divided md-post mt-lg-0 mt-30">
