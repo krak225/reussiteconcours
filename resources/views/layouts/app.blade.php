@@ -105,7 +105,7 @@
 					</ul>
 				</li>
 				<li>
-					<a href="{{ route('home') }}">COURS DE PREPARATION</a>
+					<a href="#cp">COURS DE PREPARATION</a>
 				</li>	
 				<li>
 					<a href="{{ route('home') }}">A propos de nous</a>

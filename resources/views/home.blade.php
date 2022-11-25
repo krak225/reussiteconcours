@@ -106,6 +106,7 @@
 		</div>
 	</section>
 	
+	<a name="cp"></a>
 	<section class="pt-xl-100 pb-50" data-aos="fade-up">
 		<div class="container">
 			<div class="row justify-content-center">
