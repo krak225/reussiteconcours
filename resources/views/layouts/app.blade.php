@@ -104,13 +104,9 @@
 						<li><a href="#">GENDARMERIE</a></li>
 					</ul>
 				</li>
-				<li class="dropdown">
-					<a href="{{ route('home') }}">PREPA CONCOURS</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">PARTICIPER</a></li>
-						<li><a href="#">COURS A DISTANCE</a></li>
-					</ul>
-				</li>
+				<li>
+					<a href="{{ route('home') }}">COURS DE PREPARATION</a>
+				</li>	
 				<li>
 					<a href="{{ route('home') }}">A propos de nous</a>
 				</li>	
