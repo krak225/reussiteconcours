@@ -50,6 +50,7 @@ Route::get('/paiement_reussie', [CinetPayCallbackController::class, 'paiement_re
 Route::get('/paiement_echoue', [CinetPayCallbackController::class, 'paiement_echoue'])->name('paiement_echoue');
 
 Route::get('/telechargements', [TelechargementController::class, 'telechargements'])->name('telechargements');
+Route::post('/telechargements', [TelechargementController::class, 'telechargements'])->name('telechargements_post');
 Route::get('/telecharger/{id}', [TelechargementController::class, 'telecharger'])->name('telecharger');
 
 
