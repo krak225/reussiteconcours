@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <section class="bg-img pt-200 pb-120" data-overlay="7" style="background-image: url({{ asset('images/front-end-img/banners/banner-1.jpg')}}); background-position: top center;">
+    <section class="bg-img pt-70 pb-120" data-overlay="7" style="background-image: url({{ asset('images/bg_accueil.jpg')}}); background-position: top center;">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -12,19 +12,41 @@
 					</div>
 					<form class="cours-search">
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Que recherchez-vous ?">
+							<input type="text" class="form-control" placeholder="Quel concours voulez-vous passer cette année ?">
 							<div class="input-group-append">
 								<button class="btn btn-block btn-primary" type="submit">Rechercher</button> 
 							</div>
 						</div>
 					</form>	
 					<div class="text-center">
-						<a href="courses_list.html" class="btn btn-outline text-white">Parcourir les documents</a>
+						<a href="#ed" class="btn btn-outline text-white">Parcourir les documents</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+	
+	<!--section class="bg-img pt-70 pb-50" data-overlay="7" style="background-image: url(https://utechnopole.com/images/front-end-img/background/bg_accueil.jpg); background-position: top center;">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="text-center mt-80">
+						<h1 class="box-title text-white font-weight-600 mb-30" style="margin-top: 150px;">Trouvez vos cours en ligne 100% Live, dispensés par des universitaires et des experts praticiens</h1>	
+						<form class="cours-search" action="#" autocomplete="off">
+							<div class="input-group">
+								<input type="text" class="form-control mr-2" required="" placeholder="Que voulez-vous apprendre aujourd'hui ?" name="r" value="">
+								<button class="btn btn-primary" type="submit">Rechercher</button>
+							</div>
+						</form>					</div>
+					<div class="text-center">
+						<a href="#" class="btn btn-outline text-white">Listes de nos formations</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section-->
+
+	<a name="ed"></a>
 	<section class="py-50 bg-white" data-aos="fade-up">
 		<div class="container">
 			<div class="row justify-content-center">
