@@ -44,8 +44,8 @@ Route::get('/checkout', [CommandeController::class, 'checkout'])->name('checkout
 
 Route::post('/initpaiementcinetpay', [CinetPayController::class, 'initPaiementCinetPay'])->name('initPaiementCinetPay');
 Route::post('/notify', [CinetPayCallbackController::class, 'notify'])->name('notify');
-Route::get('/retour', [CinetPayCallbackController::class, 'retour'])->name('retour');
-Route::post('/retour', [CinetPayCallbackController::class, 'retour'])->name('retour_post');
+Route::get('/retour', [CinetPayController::class, 'retour'])->name('retour');
+Route::post('/retour', [CinetPayController::class, 'retour'])->name('retour_post');
 Route::get('/paiementaconfirmer', [CinetPayCallbackController::class, 'PaiementAConfirmer'])->name('PaiementAConfirmer');
 Route::get('/paiement_reussie', [CinetPayCallbackController::class, 'paiement_reussie'])->name('paiement_reussie');
 Route::get('/paiement_echoue', [CinetPayCallbackController::class, 'paiement_echoue'])->name('paiement_echoue');
