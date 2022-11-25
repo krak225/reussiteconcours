@@ -44,13 +44,13 @@ Route::get('/checkout', [CommandeController::class, 'checkout'])->name('checkout
 
 Route::post('/initpaiementcinetpay', [CinetPayController::class, 'initPaiementCinetPay'])->name('initPaiementCinetPay');
 Route::post('/notify', [CinetPayCallbackController::class, 'notify'])->name('notify');
-Route::post('/retour', [CinetPayCallbackController::class, 'retour'])->name('retour');
+Route::get('/retour', [CinetPayCallbackController::class, 'retour'])->name('retour');
+Route::post('/retour', [CinetPayCallbackController::class, 'retour'])->name('retour_post');
 Route::get('/paiementaconfirmer', [CinetPayCallbackController::class, 'PaiementAConfirmer'])->name('PaiementAConfirmer');
 Route::get('/paiement_reussie', [CinetPayCallbackController::class, 'paiement_reussie'])->name('paiement_reussie');
 Route::get('/paiement_echoue', [CinetPayCallbackController::class, 'paiement_echoue'])->name('paiement_echoue');
 
 Route::get('/telechargements', [TelechargementController::class, 'telechargements'])->name('telechargements');
-Route::post('/telechargements', [TelechargementController::class, 'telechargements'])->name('telechargements_post');
 Route::get('/telecharger/{id}', [TelechargementController::class, 'telecharger'])->name('telecharger');
 
 

@@ -40,7 +40,7 @@ class CinetPayController extends Controller
 			$ENDPOINT 			= 'https://api-checkout.cinetpay.com/v2/payment';
 			$SITE_ID 			= '391516';
 			$API_KEY 			= '2782059835fd0aabd4be567.60280545';
-			$RETURN_URL	= 'https://reussiteconcours.com/telechargements';
+			$RETURN_URL	= 'https://reussiteconcours.com/retour';
 			$NOTIFY_URL	= 'https://reussiteconcours.com/notify';
 			
 			
@@ -298,6 +298,20 @@ class CinetPayController extends Controller
 		}
 	
 	}
+	
+	
+	public function retour(Request $request)
+    {
+		
+		# RETOUR SUR LE SITE APRES CINETPAY';
+		// $ipn = new IPN();
+		// $ipn->ipn_data = 'retour Events ';
+		// $ipn->ipn_date = gmdate('Y-m-d H:i:s');
+		// $ipn->save();
+		
+		return redirect()->route('telechargements');
+		
+    }
 	
 	
 }

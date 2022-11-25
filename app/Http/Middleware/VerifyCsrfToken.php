@@ -18,6 +18,10 @@ class VerifyCsrfToken extends Middleware
 		'https://reussiteconcours.com/notify',
 		'https://reussiteconcours.com/notify/',
 		'http://localhost/reussiteconcours/public/notify',
+		'http://reussiteconcours.com/retour',
+		'http://reussiteconcours.com/retour/',
+		'https://reussiteconcours.com/retour',
+		'https://reussiteconcours.com/retour/',
     ];
 	
 }
