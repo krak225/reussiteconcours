@@ -121,9 +121,12 @@
 							<tbody id="cart-tablebody_commande">
 								@foreach($livres_commandes as $livre)
 								<tr>
-									<td><img src="{{ asset('images/livres/couvertures/'.$livre->livre_couverture) }}" alt="" width="80"></td>
 									<td>
-										<h5>{{ $livre->livre_nom }}</h5>
+									<a href="{{ route('details_livre', $livre->livre_id) }}">
+									<img src="{{ asset('images/livres/couvertures/'.$livre->livre_couverture) }}" alt="" width="80"></td>
+									</a>
+									<td>
+										<h5><a href="{{ route('details_livre', $livre->livre_id) }}">{{ $livre->livre_nom }}</a></h5>
 										<p>{{ $livre->livre_description }}</p>
 									</td>
 									<td width="130" align="center" class="font-weight-900">{{ number_format($livre->livre_prix, 0, '.', ' ') }} FCFA</td>

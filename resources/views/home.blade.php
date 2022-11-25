@@ -53,7 +53,7 @@
 											</a>
 											<div class="box-body"> 
 												<div class="text-left">
-													<h4 class="box-title">{{ $livre->livre_nom }}</h4>
+													<h4 class="box-title"><a href="{{ route('details_livre', $livre->livre_id) }}">{{ $livre->livre_nom }}</a></h4>
 													<!--p class="mb-10 text-light font-size-12"><i class="fa fa-calendar mr-5"></i> {{ $livre->livre_date_creation }}</p-->
 													<p class="box-text text-muted my-5 text-justify">{{ $livre->livre_description }}</p>
 													<h4 class="pro-price text-blue">{{ $livre->livre_prix }} FCFA<small class="ml-5"><del><!--$24.99--></del></small></h4>
