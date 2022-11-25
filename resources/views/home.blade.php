@@ -123,7 +123,7 @@
 							<div class="col-lg-6 col-12">
 								<div class="media-list media-list-hover media-list-divided md-post mt-lg-0 mt-30">
 									<a class="media media-single box-shadowed bg-white pull-up mb-15" href="#">
-									  <img class="w-80 rounded ml-0" src="../images/front-end-img/courses/cor-logo-1.png" alt="...">
+									  <img class="w-80 rounded ml-0" src="{{ asset('images/cours_preparation.png') }}" alt="...">
 									  <div class="media-body font-weight-500">
 										<h5 class="overflow-hidden text-overflow-h nowrap">INHP</h5>
 										<small class="text-fade">Samedi, de 8:00 - 12:00</small>
@@ -131,7 +131,7 @@
 									  </div>
 									</a>
 									<a class="media media-single box-shadowed bg-white pull-up mb-15" href="#">
-									  <img class="w-80 rounded ml-0" src="../images/front-end-img/courses/cor-logo-2.png" alt="...">
+									  <img class="w-80 rounded ml-0" src="{{ asset('images/cours_preparation.png') }}" alt="...">
 									  <div class="media-body font-weight-500">
 										<h5 class="overflow-hidden text-overflow-h nowrap">CAFOP</h5>
 										<small class="text-fade">Samedi, de 14:00 - 18:00</small>
@@ -139,7 +139,7 @@
 									  </div>
 									</a>
 									<a class="media media-single box-shadowed bg-white pull-up mb-15" href="#">
-									  <img class="w-80 rounded ml-0" src="../images/front-end-img/courses/cor-logo-3.png" alt="...">
+									  <img class="w-80 rounded ml-0" src="{{ asset('images/cours_preparation.png') }}" alt="...">
 									  <div class="media-body font-weight-500">
 										<h5 class="overflow-hidden text-overflow-h nowrap">INFAS</h5>
 										<small class="text-fade">Samedi, de 14:00 - 18:00</small>
@@ -147,7 +147,7 @@
 									  </div>
 									</a>
 									<a class="media media-single box-shadowed bg-white pull-up mb-0" href="#">
-									  <img class="w-80 rounded ml-0" src="../images/front-end-img/courses/cor-logo-4.png" alt="...">
+									  <img class="w-80 rounded ml-0" src="{{ asset('images/cours_preparation.png') }}" alt="...">
 									  <div class="media-body font-weight-500">
 										<h5 class="overflow-hidden text-overflow-h nowrap">POLICE</h5>
 										<small class="text-fade">Samedi, de 14:00 - 18:00</small>
