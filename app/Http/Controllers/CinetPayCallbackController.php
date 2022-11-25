@@ -161,7 +161,7 @@ class CinetPayCallbackController extends Controller
 					// $CinetPay->getPayStatus($id_transaction, $site_id);
 					$transationData = $this->getTransactionStatus($id_transaction, $site_id);	
 					
-					Stdfn::debug($transationData);
+					// Stdfn::debug($transationData);
 					
 					//Save string to log, use FILE_APPEND to append.
 					// $fp = fopen('log_transationData'.gmdate("Y-m-d H:i:s").'.log', 'a+');
@@ -248,7 +248,8 @@ class CinetPayCallbackController extends Controller
 						
 					} else {
 						// transaction n'est pas valide
-						$output = 'Echec, votre paiement a échoué pour cause : ' .$message;
+						// $output = 'Echec, votre paiement a échoué pour cause : ' .$message;
+						$output = 'Paiement non effectué : ' .$message;
 						echo $output;
 						
 						$checkout_session->checkout_session_commentaire = $status;
