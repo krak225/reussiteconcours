@@ -59,7 +59,7 @@ $(document).ready(function() {
 		
 		$('#in-cart-items-num').html(cartArticles.length);
 		
-		location.href="panier";
+		location.href="https://reussiteconcours.com/panier";
 		
 		// notificationSuccess('Article ajouté au panier avec succès !');
 		

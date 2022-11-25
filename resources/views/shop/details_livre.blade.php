@@ -150,7 +150,7 @@
 								<div class="fx-overlay scrl-up">						
 									<ul class="fx-info">
 										<li><a class="btn btn-outline image-popup-vertical-fit" href="{{ route('details_livre', $livre->livre_id) }}">Voir plus</a></li>
-										<li><a class="btn btn-outline btnAddPanier" href="javascript:void(0);">Ajouter au panier</a></li>
+										<li><span class="btn btn-outline btn-primary btn-sm btnAddPanier" data-livre_id="{{ $livre->livre_id }}" data-livre_prix="{{ $livre->livre_prix }}" data-livre_nom="{{ $livre->livre_nom }}" data-livre_description="{{ $livre->livre_description }}" data-livre_couverture="{{ asset('images/livres/couvertures/'.$livre->livre_couverture) }}"><i class="mdi mdi-cart-plus"></i> Ajouter au panier</span></li>
 									</ul>
 								</div>
 							</div>
