@@ -161,6 +161,8 @@ class CinetPayCallbackController extends Controller
 					// $CinetPay->getPayStatus($id_transaction, $site_id);
 					$transationData = $this->getTransactionStatus($id_transaction, $site_id);	
 					
+					Stdfn::debug($transationData);
+					
 					//Save string to log, use FILE_APPEND to append.
 					// $fp = fopen('log_transationData'.gmdate("Y-m-d H:i:s").'.log', 'a+');
 					// fputs($fp, json_encode($transationData));
