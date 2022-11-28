@@ -525,14 +525,14 @@ $(function () {
 
 
 var options = {
-	title: 'Ce site internet utilise les cookies.<br> En restant sur ce site vous conssentez que vos données personnelles soit enregistrée.',
-	message: 'We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services',
+	title: "Ce site internet utilise les cookies.<br> En restant sur ce site vous conssentez que vos données personnelles soit enregistrée.",
+	message: "Nous utilisons des cookies pour personnaliser le contenu et les publicités, pour fournir des fonctionnalités de médias sociaux et pour analyser notre trafic. Nous partageons également des informations sur votre utilisation de notre site avec nos partenaires de médias sociaux, de publicité et d'analyse qui peuvent les combiner avec d'autres informations que vous leur avez fournies ou qu'ils ont collectées lors de votre utilisation de leurs services.",
 	delay: 600,
 	expires: 1,
 	link: '#privacy',
 	onAccept: function(){
 		var myPreferences = $.fn.ihavecookies.cookie();
-		console.log('Yay! The following preferences were saved...');
+		console.log('Les préférences suivantes ont été enregistrées...');
 		console.log(myPreferences);
 	},
 	uncheckBoxes: true,
@@ -544,15 +544,17 @@ var options = {
 }
 
 $(document).ready(function() {
+	
 	$('body').ihavecookies(options);
-
+	
 	if ($.fn.ihavecookies.preference('marketing') === true) {
-		console.log('This should run because marketing is accepted.');
+		console.log('Cela devrait fonctionner car le marketing est accepté.');
 	}
-
+	
 	$('#ihavecookiesBtn').on('click', function(){
 		$('body').ihavecookies(options, 'reinit');
 	});
+	
 });
 
 

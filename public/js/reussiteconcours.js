@@ -61,7 +61,7 @@ $(document).ready(function() {
 		
 		location.href="https://reussiteconcours.com/panier";
 		
-		// notificationSuccess('Article ajouté au panier avec succès !');
+		notificationSuccess('Article ajouté au panier avec succès !');
 		
 	}
 	
