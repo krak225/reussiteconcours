@@ -9,6 +9,7 @@ use App\Http\Controllers\CommandeController;
 use App\Http\Controllers\CinetPayController;
 use App\Http\Controllers\CinetPayCallbackController;
 use App\Http\Controllers\TelechargementController;
+use App\Http\Controllers\TransfertController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\SecurityController;
@@ -42,6 +43,9 @@ Route::get('/panier', [HomeController::class, 'panier'])->name('panier');
 Route::post('/commande', [CommandeController::class, 'SaveCommande'])->name('SaveCommande');
 Route::get('/checkout', [CommandeController::class, 'checkout'])->name('checkout');
 
+Route::get('/commandes', [CommandeController::class, 'commandes'])->name('commandes');
+Route::get('/commande/{commande_id}', [CommandeController::class, 'DetailsCommande'])->name('DetailsCommande');
+
 Route::post('/initpaiementcinetpay', [CinetPayController::class, 'initPaiementCinetPay'])->name('initPaiementCinetPay');
 Route::post('/notify', [CinetPayCallbackController::class, 'notify'])->name('notify');
 Route::get('/retour', [CinetPayController::class, 'retour'])->name('retour');
@@ -53,6 +57,9 @@ Route::get('/paiement_echoue', [CinetPayCallbackController::class, 'paiement_ech
 Route::get('/telechargements', [TelechargementController::class, 'telechargements'])->name('telechargements');
 Route::get('/telecharger/{id}', [TelechargementController::class, 'telecharger'])->name('telecharger');
 
+
+
+Route::get('/transfert', [TransfertController ::class, 'initTransfertCinetPay'])->name('initTransfertCinetPay');
 
 // Route::get('/clear-cache', function() {
     // Artisan::call('cache:clear');

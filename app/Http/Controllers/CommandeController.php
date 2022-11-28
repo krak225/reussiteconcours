@@ -124,4 +124,32 @@ class CommandeController extends Controller
 	
 	
 	
+    public function commandes()
+    {
+		
+		$commandes = Commande::where(['user_id'=>Auth::user()->id])->get();
+		
+		return view('shop.commandes', ['commandes'=>$commandes]);
+		
+    }
+	
+	
+    public function DetailsCommande($commande_id)
+    {
+		
+		$commande = Commande::where(['commande_id'=>$commande_id])->first();
+		
+		if(!empty($commande)){
+			
+			$livres_commandes = DetailCommande::join('livre','livre.livre_id','detail_commande.livre_id')->where(['commande_id'=>$commande_id])->get();
+		
+			return view('shop.checkout', ['commande'=>$commande, 'livres_commandes'=>$livres_commandes]);
+		
+		}else{
+			return redirect()->route('commandes'); 
+		}
+		
+    }
+	
+	
 }

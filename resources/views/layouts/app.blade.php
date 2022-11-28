@@ -66,6 +66,7 @@
 					 <li class="mr-10 pl-10"><a href="{{ route('inscription') }}"><i class="text-white fa fa-user d-md-inline-block d-none"></i> S'inscrire</a></li>
 					 <li class="mr-10 pl-10"><a href="{{ route('login') }}"><i class="text-white fa fa-sign-in d-md-inline-block d-none"></i> Se connecter</a></li>
 					 @else
+					 <li class="mr-10 pl-10"><a href="{{ route('commandes') }}"><i class="text-white fa fa-file-o d-md-inline-block d-none"></i> Mes commandes</a></li>
 					 <li class="mr-10 pl-10"><a href="#"><i class="text-white fa fa-dashboard d-md-inline-block d-none"></i> Mon compte</a></li>
 					 @endguest
 				  </ul>

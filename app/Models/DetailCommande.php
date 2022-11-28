@@ -13,4 +13,8 @@ class DetailCommande extends Model
 	public $timestamps = false;
 	
 	
+	public function livre(){
+		return $this->hasOne(Livre::class, 'livre_id');	
+	}
+	
 }

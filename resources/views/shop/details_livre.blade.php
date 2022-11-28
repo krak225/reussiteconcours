@@ -67,9 +67,7 @@
 									</div>
 									<h4 class="box-title mt-20 d-block">Concours concernés</h4>
 									<ul class="list list-unstyled mb-30">
-										<li><i class="fa fa-check text-danger float-none"></i> POLICE</li>
 										<li><i class="fa fa-check text-danger float-none"></i> CAFOP</li>
-										<li><i class="fa fa-check text-danger float-none"></i> INHP</li>
 									</ul>
 								</div>
 								<div class="col-12">
