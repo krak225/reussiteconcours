@@ -36,7 +36,7 @@
 							<thead>
 								<tr>
 									<th>Date</th>
-									<th>Livres commandés </th>
+									<th>Numéro de la commande</th>
 									<th style="text-align:center">Montant total</th>
 									<th style="text-align:center">Statut</th>
 									<th style="text-align:center">Paiement</th>
@@ -47,13 +47,7 @@
 								@foreach($commandes as $commande)
 								<tr>
 									<td>{{ Stdfn::dateFromDB($commande->commande_date_creation) }}</td>
-									<td>
-										@foreach($commande->livres as $details_commande)
-											@if(isset($details_commande->livre->livre_id))
-											<a href="{{ route('details_livre', $details_commande->livre->livre_id)  }}" target="_blank">{{ @$details_commande->livre->livre_nom }}</a>,
-											@endif
-										@endforeach
-									</td>
+									<td>{{ $commande->commande_numero }}</td>
 									<td width="150" align="center" class="font-weight-900">{{ $commande->commande_montant_total }} FCFA</td>
 									<td width="150" align="center">{{ $commande->commande_statut }}</td>
 									<td width="150" align="center">{{ $commande->commande_statut_paiement }}</td>
