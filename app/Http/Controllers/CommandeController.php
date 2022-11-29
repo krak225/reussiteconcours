@@ -36,7 +36,7 @@ class CommandeController extends Controller
 			
 			$commande = new Commande();
 			$commande->user_id = Auth::user()->id;
-			$commande->commande_numero = Stdfn::guidv4();
+			// $commande->commande_numero = Stdfn::guidv4();
 			$commande->commande_date_creation = gmdate('Y-m-d H:i:s');
 			$commande->save();
 			
@@ -59,8 +59,9 @@ class CommandeController extends Controller
 				
 			}
 			
-			$commande->commande_montant_total = $montant_total;
+			$commande->commande_montant_total  = $montant_total;
 			$commande->commande_nombre_article = $nombre_article;
+			$commande->commande_numero 		   = 'CMD-'. Stdfn::truncateN($commande->commande_id, 6);
 			$commande->exists = true;
 			$commande->save();
 			

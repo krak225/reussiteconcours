@@ -74,8 +74,42 @@ class TransfertController extends Controller
 	
 	
 	//
-	public function initTransfertCinetPay(Request $request)
+	public function addContact(Request $request)
     {
+		
+		$curl = curl_init();
+
+		curl_setopt_array($curl, array(
+		  CURLOPT_URL => 'https://client.cinetpay.com/v1/transfer/contact?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIwMzM1LCJpc3MiOiJodHRwczovL2NsaWVudC5jaW5ldHBheS5jb20vdjEvYXV0aC9sb2dpbiIsImlhdCI6MTY2OTY1NjY3NCwiZXhwIjoxNjY5NjYzOTM0LCJuYmYiOjE2Njk2NTY2NzQsImp0aSI6ImdvNVFKT09NQ0c3eDNNcVAifQ.tEVkLvqdgma0lnpxu1QEscVFCGhmHIIF-0rraB72oZo',
+		  CURLOPT_RETURNTRANSFER => true,
+		  CURLOPT_ENCODING => '',
+		  CURLOPT_MAXREDIRS => 10,
+		  CURLOPT_TIMEOUT => 0,
+		  CURLOPT_FOLLOWLOCATION => true,
+		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		  CURLOPT_CUSTOMREQUEST => 'POST',
+		  CURLOPT_POSTFIELDS => 'data=%5B%7B%20%22prefix%22%3A%20%22221%22%2C%20%22phone%22%3A%20%2205047836%22%2C%20%22name%22%3A%20%22C%C3%A9dric%22%2C%20%22surname%22%3A%20%22S%22%2C%20%22email%22%3A%20%22email%40example.com%22%20%7D%5D',
+		  CURLOPT_HTTPHEADER => array(
+			'Content-Type: application/x-www-form-urlencoded',
+			'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIwMzM1LCJpc3MiOiJodHRwczovL2NsaWVudC5jaW5ldHBheS5jb20vdjEvYXV0aC9sb2dpbiIsImlhdCI6MTY2OTY1MDg0NSwiZXhwIjoxNjY5NjU4MTA1LCJuYmYiOjE2Njk2NTA4NDUsImp0aSI6IkR1Rk5oY2gyS0Y1amVhN0cifQ.OuDczvdxm772If35VYLJL4_SJyehY3K69AXP6pGEcOw'
+		  ),
+		));
+
+		$response = curl_exec($curl);
+
+		curl_close($curl);
+		echo $response;
+		
+    }
+	
+	
+	//
+	public function sendMoney(Request $request)
+    {	
+		
+		$amount = 100;
+		$phone = '0504783689';
+		$prefix = '225';
 		
 		$token = $this->getAccessToken();
 		
@@ -84,41 +118,36 @@ class TransfertController extends Controller
 			
 			$transaction_id 	= Stdfn::guidv4();
 		
-			$ENDPOINT 			= 'https://client.cinetpay.com/v1/transfer/money/send/contact';
-			$NOTIFY_URL	= 'https://reussiteconcours.com/notify';
+			$ENDPOINT 			= 'https://client.cinetpay.com/v1/transfer/money/send/contact?token='.$token.'&transaction_id='.$transaction_id;
+			$NOTIFY_URL			= 'https://reussiteconcours.com/notify';
 			
 			$curl = curl_init();
 			
+
 			curl_setopt_array($curl, array(
-			  CURLOPT_URL => 'https://client.cinetpay.com/v1/auth/login',
-			  CURLOPT_RETURNTRANSFER => true,
-			  CURLOPT_ENCODING => '',
-			  CURLOPT_MAXREDIRS => 10,
-			  CURLOPT_TIMEOUT => 0,
-			  CURLOPT_FOLLOWLOCATION => true,
-			  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-			  CURLOPT_CUSTOMREQUEST => 'POST',
-			  CURLOPT_POSTFIELDS => "client_transaction_id=$transaction_id&amount=100&prefix=225&phone=0504783689&notify_url=$NOTIFY_URL",
-			  CURLOPT_HTTPHEADER => array(
-				'Authorization: Bearer '.$token,
-				'Content-Type: application/x-www-form-urlencoded'
-			  ),
+				CURLOPT_URL => $ENDPOINT,
+				CURLOPT_RETURNTRANSFER => true,
+				CURLOPT_ENCODING => '',
+				CURLOPT_MAXREDIRS => 10,
+				CURLOPT_TIMEOUT => 0,
+				CURLOPT_FOLLOWLOCATION => true,
+				CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+				CURLOPT_CUSTOMREQUEST => 'POST',
+				CURLOPT_POSTFIELDS => 'data=%5B%7B%22amount%22%3A%22'.$amount.'%22%2C%22phone%22%3A%22'.$phone.'%22%2C%22prefix%22%3A%22'.$prefix.'%22%2C%22notify_url%22%3A%22https%3A%2F%2Freussiteconcours.com%2Fnotify%22%7D%5D',
+				CURLOPT_HTTPHEADER => array(
+					'Content-Type: application/x-www-form-urlencoded',
+					'Authorization: Bearer '. $token
+				),
 			));
 
-			$response 			= curl_exec($curl);
-			$err 			  	= curl_error($curl);
-			$curl_status_code 	= curl_getinfo($curl, CURLINFO_HTTP_CODE);
-				
+			$response = curl_exec($curl);
+			
+			$result = json_decode($response);
+			
+			die($result->message);
+			
 			curl_close($curl);
-			
-			if ($err) {
-			  echo "cURL Error #:" . $err;
-			} else {
-				$reponse_json = json_decode($response);
-			}
-			
-			dd($reponse_json);
-			
+			echo $response;
 			
 			
 		}else{
