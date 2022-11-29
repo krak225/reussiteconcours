@@ -128,7 +128,7 @@ class CommandeController extends Controller
     public function commandes()
     {
 		
-		$commandes = Commande::where(['user_id'=>Auth::user()->id])->get()->sortBy('commande_id');
+		$commandes = Commande::where(['user_id'=>Auth::user()->id])->get()->sortByDesc('commande_id');
 		
 		return view('shop.commandes', ['commandes'=>$commandes]);
 		
