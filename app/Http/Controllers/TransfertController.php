@@ -146,6 +146,8 @@ class TransfertController extends Controller
 			
 			$result = json_decode($response);
 			
+			dd($result);
+			
 			if($result->code == 0){
 				
 				curl_close($curl);
