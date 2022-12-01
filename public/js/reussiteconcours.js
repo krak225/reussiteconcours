@@ -1,6 +1,10 @@
 
 $(document).ready(function() {
 	
+	if($('.solid-container')){
+		$('.solid-container').FlipBook({pdf: $('.solid-container').attr('src')});
+	}
+	
 	function getCurrentDateTime(){
 		
 		var today = new Date();

@@ -226,6 +226,19 @@
 	<script src="{{ asset('js/noty/layouts/center.js') }}"></script>
 	<script src="{{ asset('js/noty/themes/default.js') }}"></script>
 	
+	
+	<script src="{{ asset('js/flipbook/js/three.min.js') }}"></script>
+	<script src="{{ asset('js/flipbook/js/pdf.min.js') }}"></script>
+
+	<script type="text/javascript">
+	  window.PDFJS_LOCALE = {
+		pdfJsWorker: '{{ asset("js/flipbook/js/pdf.worker.js") }}',
+		pdfJsCMapUrl: 'cmaps'
+	  };
+	</script>
+	<script src="{{ asset('js/flipbook/js/3dflipbook.min.js') }}"></script>
+	
+	
 	<!-- EduAdmin front end -->
 	<script src="{{ asset('js/template.js') }}"></script>
 	

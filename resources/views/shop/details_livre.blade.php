@@ -1,8 +1,7 @@
 ﻿@extends('layouts.app')
 
 @section('content')
-
-
+	
 	<!---page Title --->
 	<section class="bg-img pt-150 pb-20" data-overlay="7" style="background-image: url(../images/front-end-img/background/bg-8.jpg);">
 		<div class="container">
@@ -134,6 +133,20 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
+					<h2>Un extrait du livre</h2>
+					<hr>
+				</div>
+			</div>
+			<div class="row fx-element-overlay">
+				<div class="flip-book-container solid-container" src="{{ asset('images/livres/pdf/'.$livre->livre_fichier_extrait) }}" style="height:700px;width:100%;"></div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="pb-50">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
 					<h2>Autres livres</h2>
 					<hr>
 				</div>
@@ -174,6 +187,6 @@
 			</div>
 		</div>
 	</section>
-
+	
 
 @endsection

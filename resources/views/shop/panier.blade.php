@@ -26,7 +26,7 @@
 			  <div class="col-12">
 				<div class="box">
 				  <div class="box-header bg-info">
-					<h4 class="box-title"><strong>DETAILS DE LA COMMANDE (<span id="cartArticlesCount">0</span> livres)</strong></h4>
+					<h4 class="box-title"><strong>DETAILS DU PANIER (<span id="cartArticlesCount">0</span> livres)</strong></h4>
 				  </div>
 
 				  <div class="box-body">
@@ -83,7 +83,7 @@
 			  <div class="col-12 col-lg-6">
 				<div class="box">
 				  <div class="box-header bg-info">
-					<h4 class="box-title"><strong>Résumé de ma commande</strong></h4>
+					<h4 class="box-title"><strong>Montant total</strong></h4>
 				  </div>
 				  <div class="box-body py-0">
 					<div class="table-responsive">

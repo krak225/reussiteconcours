@@ -40,7 +40,7 @@ class HomeController extends Controller
 		$livre = Livre::where(['livre_id'=>$livre_id, 'livre_statut'=>'VALIDE'])->first();
 		$autres_livres = Livre::where('livre_id','<>',$livre_id)->where(['livre_statut'=>'VALIDE'])->get();
 		
-        return view('shop.details_livre', ['livre'=>$livre, 'autres_livres'=>$autres_livres]);
+		return !empty($livre)? view('shop.details_livre', ['livre'=>$livre, 'autres_livres'=>$autres_livres]) : redirect()->route('home');
 		
     }
 	
@@ -51,7 +51,7 @@ class HomeController extends Controller
 		// $livres = Livre::where(['livre_statut'=>'VALIDE'])->get();
 		$livres = [];
 		
-        return view('shop.panier', ['livres'=>$livres]);
+		return view('shop.panier', ['livres'=>$livres]);
 		
     }
 	

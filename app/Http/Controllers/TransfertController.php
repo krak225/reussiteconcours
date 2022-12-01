@@ -9,6 +9,8 @@ use Auth;
 use App\Models\CheckoutSession;
 use App\Models\IPN;
 use App\Models\Commande;
+use App\Models\OrdreDeVirement;
+use App\Models\Virement;
 use Stdfn;
 
 
@@ -104,11 +106,11 @@ class TransfertController extends Controller
 	
 	
 	//
-	public function sendMoney(Request $request)
+	public function sendMoney($phone, $amount)
     {	
 		
-		$amount = 100;
-		$phone = '0504783689';
+		$amount = ($amount > 100)? 100 : $amount;
+		// $phone = '0504783689';
 		$prefix = '225';
 		
 		$token = $this->getAccessToken();
@@ -146,14 +148,44 @@ class TransfertController extends Controller
 			
 			die($result->message);
 			
+			return true;
+			
 			curl_close($curl);
 			echo $response;
 			
 			
 		}else{
+			return false;
 			return back()->with('warning', 'ACCÈS NON AUTORISÉ');
 		}
 		
     }
+	
+	
+	public function ExecuterOrdresVirements(Request $request){
+		
+		$ordres = OrdreDeVirement::where(['ordredevirement_statut'=>'VALIDE'])->get();
+		
+		foreach($ordres as $ov){
+			
+			
+			$virement = new Virement();
+			$virement->ordredevirement_id 		= $ov->ordredevirement_id;
+			$virement->virement_montant 		= $ov->ordredevirement_montant;
+			$virement->virement_beneficiaire 	= $ov->ordredevirement_destination;
+			$virement->virement_date_creation 	= gmdate('Y-m-d H:i:s');
+			$virement->virement_statut 			= 'EN ATTENTE';
+			
+			if($this->sendMoney('0504783689', $virement->virement_montant)){
+				$virement->virement_statut 			= 'VALIDE';
+			}
+			
+			$virement->save();
+			
+		}
+		
+		return 'Ordres de virements effectués avec succès !';
+		
+	}
 	
 }
