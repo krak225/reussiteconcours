@@ -60,7 +60,7 @@ Route::get('/telecharger/{id}', [TelechargementController::class, 'telecharger']
 
 
 Route::get('/sendmoney', [TransfertController ::class, 'sendMoney'])->name('sendMoney');
-Route::get('/eov', [TransfertController ::class, 'ExecuterOrdresVirements'])->name('ExecuterOrdresVirements');
+// Route::get('/eov', [TransfertController ::class, 'ExecuterOrdresVirements'])->name('ExecuterOrdresVirements');
 
 // Route::get('/clear-cache', function() {
     // Artisan::call('cache:clear');
