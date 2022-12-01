@@ -177,7 +177,6 @@ class TransfertController extends Controller
 		
 		foreach($ordres as $ov){
 			
-			
 			$virement = new Virement();
 			$virement->ordredevirement_id 		= $ov->ordredevirement_id;
 			$virement->virement_montant 		= $ov->ordredevirement_montant;
@@ -186,14 +185,14 @@ class TransfertController extends Controller
 			$virement->virement_statut 			= 'EN ATTENTE';
 			
 			if($this->sendMoney('0504783689', $virement->virement_montant)){
-				$virement->virement_statut 			= 'VALIDE';
+				$virement->virement_statut 			= 'EFFECTUE';
 			}
 			
 			$virement->save();
 			
 		}
 		
-		return 'Ordres de virements effectués avec succès !';
+		return 'Ordres de virements exécutés avec succès !';
 		
 	}
 	
