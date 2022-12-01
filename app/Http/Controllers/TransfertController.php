@@ -115,7 +115,7 @@ class TransfertController extends Controller
 		
 		$token = $this->getAccessToken();
 		
-		//APPELER L'API DE CINETPAY
+		//
 		if(!empty($token)){
 			
 			$transaction_id 	= Stdfn::guidv4();
@@ -146,17 +146,26 @@ class TransfertController extends Controller
 			
 			$result = json_decode($response);
 			
-			die($result->message);
-			
-			return true;
-			
-			curl_close($curl);
-			echo $response;
+			if($result->code == 0){
+				
+				curl_close($curl);
+				// echo $response;
+				
+				return true;
+				
+			}else{
+				
+				return false;
+				
+			}
 			
 			
 		}else{
+			
 			return false;
-			return back()->with('warning', 'ACCÈS NON AUTORISÉ');
+			
+			// return back()->with('warning', 'ACCÈS NON AUTORISÉ');
+			
 		}
 		
     }
