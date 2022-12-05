@@ -66,7 +66,7 @@
 									</div>
 									<h4 class="box-title mt-20 d-block">Matières</h4>
 									<ul class="list list-unstyled mb-30">
-										<li><i class="fa fa-check text-info float-none"></i> FRANÇAIS</li>
+										<li><i class="fa fa-check text-info float-none"></i> Français</li>
 										<li><i class="fa fa-check text-warning float-none"></i> Culture Générale</li>
 										<li><i class="fa fa-check text-success float-none"></i> Mathématiques</li>
 										<li><i class="fa fa-check text-default float-none"></i> Tests Psychotechniques</li>
