@@ -64,9 +64,12 @@
 										<button class="btn btn-primary mr-10 mb-10 btnAddPanier" data-livre_id="{{ $livre->livre_id }}" data-livre_prix="{{ $livre->livre_prix }}" data-livre_nom="{{ $livre->livre_nom }}" data-livre_description="{{ $livre->livre_description }}"><i class="mdi mdi-cart-plus"></i> Ajouter au panier</button>
 										<!--button class="btn btn-success mr-10 mb-10"><i class="mdi mdi-download"></i> Télécharger</button-->
 									</div>
-									<h4 class="box-title mt-20 d-block">Concours concernés</h4>
+									<h4 class="box-title mt-20 d-block">Matières</h4>
 									<ul class="list list-unstyled mb-30">
-										<li><i class="fa fa-check text-danger float-none"></i> CAFOP</li>
+										<li><i class="fa fa-check text-info float-none"></i> FRANÇAIS</li>
+										<li><i class="fa fa-check text-warning float-none"></i> Culture Générale</li>
+										<li><i class="fa fa-check text-success float-none"></i> Mathématiques</li>
+										<li><i class="fa fa-check text-default float-none"></i> Tests Psychotechniques</li>
 									</ul>
 								</div>
 								<div class="col-12">
