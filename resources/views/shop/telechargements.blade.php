@@ -63,18 +63,6 @@
 				  </div>
 				</div>
 			  </div>
-			  <div class="col-12 col-lg-6">
-				<div class="box">
-				  <div class="box-header bg-dark">
-					<h4 class="box-title"><strong>Support technique</strong></h4>
-				  </div>
-
-				  <div class="box-body">
-					<h4 class="font-weight-800"><i class="ti-mobile"></i> +(225) 05 05 882 822</h4>
-					<p>Contactez-nous pour toute information. Nous sommes disponible 7j/7.</p>
-				  </div>
-				</div>
-			  </div>
 			</div>
 		</div>
 	</section>		
