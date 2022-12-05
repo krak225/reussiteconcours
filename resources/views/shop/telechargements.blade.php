@@ -48,7 +48,7 @@
 								<tr>
 									<td><img src="{{ asset('images/livres/couvertures/'.$livre->livre_couverture) }}" alt="" width="80"></td>
 									<td>
-										<h5>{{ $livre->livre_nom }}</h5>
+										<h5><a href="{{ route('details_livre', $livre->livre_id) }}">{{ $livre->livre_nom }}</a></h5>
 										<p>{{ $livre->livre_description }}</p>
 									</td>
 									<td width="150" align="center" class="font-weight-900">{{ $livre->livre_prix }} FCFA</td>
