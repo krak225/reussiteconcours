@@ -67,7 +67,7 @@ class TelechargementController extends Controller
 				
 				
 				//SI LE FICHIER EST DANS UN REPERTOIRE DU SITE
-				$chemin = 'images/livres/pdf/' . $filename_to_download;
+				$chemin = 'protected/livres/pdf'.sha1('pdf').'/'  . $filename_to_download;
 				
 				if(file_exists($chemin) && strpos($filename_to_download, '/') === FALSE && strpos($filename_to_download, '.') !== 0)
 				{
