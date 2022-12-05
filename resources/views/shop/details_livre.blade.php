@@ -138,7 +138,7 @@
 				</div>
 			</div>
 			<div class="row fx-element-overlay">
-				<div class="flip-book-container solid-container" src="{{ asset('images/livres/pdf/'.$livre->livre_fichier_extrait) }}" style="height:700px;width:100%;"></div>
+				<div class="flip-book-container solid-container" src="{{ asset('images/livres/extraits/'.$livre->livre_fichier_extrait) }}" style="height:700px;width:100%;"></div>
 			</div>
 		</div>
 	</section>
