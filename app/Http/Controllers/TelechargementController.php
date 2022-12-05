@@ -48,7 +48,7 @@ class TelechargementController extends Controller
 			
 			if(!empty($livre)){
 				
-				$filename_to_download = $livre->livre_id.'.pdf';
+				$filename_to_download = $livre->livre_fichier_complet;
 				$filename_downloaded  = $livre->livre_nom.'.pdf';
 				
 				/*//SI LE FICHIER EST ENREGISTRÉ EN BINAIRE DANS LA BASE DE DONNÉES
