@@ -194,7 +194,7 @@
 		<div class="footer-bottom bg-dark3">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-6 col-12 text-md-left text-center"> © 2022 <span class="text-white">reussiteconcours.com</span> | Tous droits reservés.</div>
+                    <div class="col-md-6 col-12 text-md-left text-center"> © 2022 <span class="text-white">reussiteconcours.com</span> | Tous droits reservés. | Réalisé par <a href="https://www.linkedin.com/in/krak225/" style="color:#F78320;font-weight:bold;">@krak225</a></div>
 					<div class="col-md-6 mt-md-0 mt-20">
 						<div class="social-icons">
 							<ul class="list-unstyled d-flex gap-items-1 justify-content-md-end justify-content-center">
@@ -227,7 +227,7 @@
 	<script src="{{ asset('js/noty/layouts/center.js') }}"></script>
 	<script src="{{ asset('js/noty/themes/default.js') }}"></script>
 	
-	
+	@if(str_contains($_SERVER['REQUEST_URI'], "livre"))
 	<script src="{{ asset('js/flipbook/js/three.min.js') }}"></script>
 	<script src="{{ asset('js/flipbook/js/pdf.min.js') }}"></script>
 
@@ -238,7 +238,7 @@
 	  };
 	</script>
 	<script src="{{ asset('js/flipbook/js/3dflipbook.min.js') }}"></script>
-	
+	@endif
 	
 	<!-- EduAdmin front end -->
 	<script src="{{ asset('js/template.js') }}"></script>
