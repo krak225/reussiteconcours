@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Site ivoirien de vente de documents des concours de cafop, infas, infs, ena, ... en ligne">
     <meta name="author" content="KR">
-    <link rel="icon" href="{{ asset('images/favicon.ico') }}">
+    <link rel="icon" href="{{ asset('images/favicon.png') }}">
 
     <title>VENTE DE DOCUMENTS DES CONCOURS DE CAFOP, INFAS, INFS, ENA, ... EN LIGNE</title>
     
@@ -76,11 +76,11 @@
 		  </div>
 		</div>
 
-		<nav hidden class="nav-white nav-transparent">
+		<nav hidden class="nav-white nav-transparent" style="background:white;">
 			<div class="nav-header">
 				<a href="{{ route('home') }}" class="brand__">
-					<!--img src="{{ asset('images/logo-light-text2.png') }}" alt=""/-->
-					<img src="{{ asset('images/logo.png') }}" alt="" style=""/>
+					<img src="{{ asset('images/logo-light-text2.png') }}" alt="" style="width:170px;height:62px;"/>
+					<!--img src="{{ asset('images/favicon.png') }}" alt=""/-->
 				</a>
 				<button class="toggle-bar">
 					<span class="ti-menu"></span>
