@@ -78,9 +78,9 @@
 
 		<nav hidden class="nav-white nav-transparent">
 			<div class="nav-header">
-				<a href="{{ route('home') }}" class="brand">
+				<a href="{{ route('home') }}" class="brand__">
 					<!--img src="{{ asset('images/logo-light-text2.png') }}" alt=""/-->
-					<img src="{{ asset('images/logo.png') }}" alt=""/>
+					<img src="{{ asset('images/logo.png') }}" alt="" style=""/>
 				</a>
 				<button class="toggle-bar">
 					<span class="ti-menu"></span>

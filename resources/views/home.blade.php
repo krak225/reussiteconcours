@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <section class="bg-img pt-70 pb-50" data-overlay="7" style="background-image: url({{ asset('images/bg_accueil.jpg')}}); background-position: top center;">
+    <section class="bg-img pt-70 pb-50" data-overlay="2" style="background-image: url({{ asset('images/bg_accueil.jpg')}}); background-position: top center;">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -14,7 +14,8 @@
 								<input type="text" class="form-control mr-2" required="" placeholder="Quel concours voulez-vous passer cette année ?" name="r" value="">
 								<button class="btn btn-primary" type="submit">Rechercher</button>
 							</div>
-						</form>					</div>
+						</form>
+					</div>
 					<div class="text-center">
 						<a href="#" class="btn btn-outline text-white">Liste des documents</a>
 					</div>

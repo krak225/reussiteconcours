@@ -22889,7 +22889,10 @@ nav {
     width: 170px;
     padding: 20px 0px; }
     nav .brand img {
-      width: 100%; }
+      /* width: 100%;  */
+      width: 170px; 
+	  display:none;
+	  }
   nav .menu li a {
     display: block;
     padding: 20px 0px;
