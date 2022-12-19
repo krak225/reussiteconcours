@@ -22954,6 +22954,14 @@ nav {
     border: none;
     outline: none; }
 
+.core-nav.nav-core-sticky{
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	-webkit-animation-duration: .3s;
+	animation-duration: .3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
 .core-nav.nav-core-sticky.on-scroll {
   z-index: 9999999999; }
 .core-nav .dropdown > .dropdown-menu > li > a {
