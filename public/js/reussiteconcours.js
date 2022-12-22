@@ -1,6 +1,7 @@
 
 $(document).ready(function() {
 	
+	/*
 	$('.owl-carousel').owlCarousel({
 		nav:true,
 		items:4,
@@ -10,7 +11,7 @@ $(document).ready(function() {
 		autoplayTimeout:1000,
 		autoplayHoverPause:true
 	});
-
+	*/
 
 	if($('.solid-container')){
 		$('.solid-container').FlipBook({pdf: $('.solid-container').attr('src')});

@@ -13,10 +13,7 @@
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="{{ asset('css/vendors_css.css') }}">
 	  
-	<!-- Style-->  
-	<link rel="stylesheet" type="text/css" href="https://bilgrity.ci/css/vendor/owl.carousel.min.css"/>
-	<link rel="stylesheet" type="text/css" href="https://bilgrity.ci/css/vendor/owl.theme.default.min.css"/>
-	
+	<!-- Style-->
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
 	<link rel="stylesheet" href="{{ asset('css/skin_color.css') }}"/>
     <script src="https://cdn.cinetpay.com/seamless/main.js"></script>
@@ -230,7 +227,7 @@
 	<script src="{{ asset('js/noty/layouts/center.js') }}"></script>
 	<script src="{{ asset('js/noty/themes/default.js') }}"></script>
 	
-	@if(str_contains($_SERVER['REQUEST_URI'], "livre"))
+	@if(!str_contains($_SERVER['REQUEST_URI'], "livre"))
 	<script src="{{ asset('js/flipbook/js/three.min.js') }}"></script>
 	<script src="{{ asset('js/flipbook/js/pdf.min.js') }}"></script>
 
@@ -242,10 +239,6 @@
 	</script>
 	<script src="{{ asset('js/flipbook/js/3dflipbook.min.js') }}"></script>
 	@endif
-	
-	
-	<script type="text/javascript" src="{{ asset('js/owl/owl.carousel.js') }}"></script>
-	<script type="text/javascript" src="https://bilgrity.ci/js/script.js"></script>
 	
 	<!-- EduAdmin front end -->
 	<script src="{{ asset('js/template.js') }}"></script>
