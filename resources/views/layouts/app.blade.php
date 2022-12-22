@@ -14,8 +14,11 @@
 	<link rel="stylesheet" href="{{ asset('css/vendors_css.css') }}">
 	  
 	<!-- Style-->  
-	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/skin_color.css') }}">
+	<link rel="stylesheet" type="text/css" href="https://bilgrity.ci/css/vendor/owl.carousel.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://bilgrity.ci/css/vendor/owl.theme.default.min.css"/>
+	
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
+	<link rel="stylesheet" href="{{ asset('css/skin_color.css') }}"/>
     <script src="https://cdn.cinetpay.com/seamless/main.js"></script>
     <style>
         .sdk {
@@ -239,6 +242,10 @@
 	</script>
 	<script src="{{ asset('js/flipbook/js/3dflipbook.min.js') }}"></script>
 	@endif
+	
+	
+	<script type="text/javascript" src="{{ asset('js/owl/owl.carousel.js') }}"></script>
+	<script type="text/javascript" src="https://bilgrity.ci/js/script.js"></script>
 	
 	<!-- EduAdmin front end -->
 	<script src="{{ asset('js/template.js') }}"></script>

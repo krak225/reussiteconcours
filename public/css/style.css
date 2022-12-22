@@ -34322,3 +34322,27 @@ img.away, img.busy, img.offline, img.online {
 /*# sourceMappingURL=style.css.map */
 
 
+/*Perso*/
+.slides-navigation a.next {
+  right: -60px;
+}
+.slides-navigation a {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 5px;
+  background: transparent;
+  display: inline-block;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #ffffff;
+  padding-top: 7px;
+  text-align: center;
+}
+.slides-navigation a {
+  position: absolute;
+  display: block;
+}

@@ -1,6 +1,17 @@
 
 $(document).ready(function() {
 	
+	$('.owl-carousel').owlCarousel({
+		nav:true,
+		items:4,
+		loop:true,
+		margin:10,
+		autoplay:true,
+		autoplayTimeout:1000,
+		autoplayHoverPause:true
+	});
+
+
 	if($('.solid-container')){
 		$('.solid-container').FlipBook({pdf: $('.solid-container').attr('src')});
 	}

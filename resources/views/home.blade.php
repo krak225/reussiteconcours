@@ -2,7 +2,75 @@
 
 @section('content')
 
+	<!-- BANNER -->
+	<!--div id="slides" class="section banner owl-carousel">
+		<ul class="slides-container">
+			<li>
+				<img src="images/slides/slide5.jpg" alt="">
+				<div class="overlay-bg"></div>
+				<div class="container">
+					<div class="wrap-caption">
+						<h2 class="caption-heading animate__animated animate__slideInRight">
+							Lignes de Transport HTB
+						</h2>
+						<p class="excerpt animate__animated">(Overhead Lines)</p>	
+					</div>
+				</div>
+			</li>
+			<li>
+				<img src="images/slides/slide2.jpg" alt="">
+				<div class="overlay-bg"></div>
+				<div class="container">
+					<div class="wrap-caption right">
+						<h2 class="caption-heading animate__animated animate__fadeInUp">
+							Postes Sources HTB
+						</h2>
+						<p class="excerpt animate__animated animate__slideInUp">(Substations)</p>	
+					</div>
+				</div>
+			</li>
+			<li>
+				<img src="images/slides/slide3.jpg" alt="">
+				<div class="overlay-bg"></div>
+				<div class="container">
+					<div class="wrap-caption center">
+						<h2 class="caption-heading animate__animated animate__fadeInDown">
+							Réseaux HTA/BT/EP
+						</h2>
+						<p class="excerpt animate__animated animate__slideInRight">(Distribution)</p>	
+					</div>
+				</div>
+			</li>
+			<li>
+				<img src="images/slides/slide3.jpg" alt="">
+				<div class="overlay-bg"></div>
+				<div class="container">
+					<div class="wrap-caption center">
+						
+						<h2 class="caption-heading animate__animated animate__fadeInDown">
+							Traitement Appels d’Offres
+						</h2>
+						<p class="excerpt animate__animated animate__slideInRight">(Tendering)</p>	
+					</div>
+				</div>
+			</li>
+			
+		</ul>
 
+		<nav class="slides-navigation">
+			<div class="container">
+				<a href="#" class="next">
+					<i class="fa fa-chevron-right"></i>
+				</a>
+				<a href="#" class="prev">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+	      	</div>
+	    </nav>
+		
+	</div-->
+	
+	
     <section class="bg-img pt-70 pb-50" data-overlay="2" style="background-image: url({{ asset('images/bg_accueil.jpg')}}); background-position: top center;">
 		<div class="container">
 			<div class="row">
